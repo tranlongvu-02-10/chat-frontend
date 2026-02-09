@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
-import UserList from './components/UserList';
-import ChatRoom from './components/ChatRoom';
-
-const Dashboard = () => {
-    const [selectedUser, setSelectedUser] = useState(null);
-
-    return (
-        <div style={{ display: 'flex' }}>
-            <UserList onSelectUser={setSelectedUser} />
-            {selectedUser ? (
-                <ChatRoom selectedUser={selectedUser} />
-            ) : (
-                <div style={{ flex: 1, textAlign: 'center', paddingTop: '100px' }}>
-                    Chọn một người để chat
-                </div>
-            )}
-        </div>
-    );
-};
+import Dashboard from './pages/Dashboard';
 
 const ProtectedRoute = ({ children }) => {
     const token = localStorage.getItem('token');

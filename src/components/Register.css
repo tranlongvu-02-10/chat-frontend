@@ -1,0 +1,382 @@
+.register-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: #16161f;
+    overflow: hidden;
+    padding: 40px;
+    gap: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.left-panel {
+    flex: 1;
+    background: linear-gradient(rgba(80, 60, 150, 0.4), rgba(100, 70, 180, 0.5)),
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+    max-height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+}
+
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(80, 60, 150, 0.6), rgba(100, 70, 180, 0.4));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.logo-back {
+    align-self: flex-start;
+    z-index: 2;
+}
+
+.back-btn {
+    background: rgba(120, 100, 200, 0.3);
+    border: 1px solid rgba(150, 130, 220, 0.4);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.back-btn:hover {
+    background: rgba(120, 100, 200, 0.5);
+    border-color: rgba(150, 130, 220, 0.6);
+}
+
+.slogan {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    z-index: 2;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a2a40;
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.right-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    box-sizing: border-box;
+}
+
+.form-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-wrapper::-webkit-scrollbar-track {
+    background: rgba(60, 60, 85, 0.3);
+    border-radius: 3px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(139, 123, 216, 0.5);
+    border-radius: 3px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 123, 216, 0.7);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.already-account {
+    color: #a0a0b8;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.already-account a {
+    color: #a78bfa;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px 20px;
+    background: rgba(60, 60, 85, 0.5);
+    border: 1px solid rgba(80, 80, 110, 0.5);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -webkit-user-drag: none;
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+input:focus {
+    border-color: #8b7bd8;
+    background: rgba(70, 70, 100, 0.6);
+    box-shadow: 0 0 0 3px rgba(139, 123, 216, 0.15);
+}
+
+input::placeholder {
+    color: #7a7a95;
+}
+
+.password-group {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #9090a8;
+    font-size: 1.1rem;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 28px 0;
+    color: #b0b0c8;
+    font-size: 0.95rem;
+}
+
+.terms-checkbox input {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    accent-color: #8b7bd8;
+}
+
+.terms-checkbox a {
+    color: #a78bfa;
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: #ff6b6b;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.create-btn {
+    width: 100%;
+    padding: 16px;
+    background: #8b7bd8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(139, 123, 216, 0.3);
+    margin-top: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.create-btn:hover {
+    background: #9d8de5;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(139, 123, 216, 0.4);
+}
+
+.create-btn:disabled {
+    background: #5a5a70;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.or-divider {
+    text-align: center;
+    color: #9090a8;
+    margin: 32px 0;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.or-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(100, 100, 130, 0.3);
+    z-index: 0;
+}
+
+.or-divider span {
+    background: #2a2a40;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.google-btn,
+.apple-btn {
+    flex: 1;
+    padding: 15px 20px;
+    background: rgba(60, 60, 85, 0.5);
+    border: 1px solid rgba(80, 80, 110, 0.5);
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.google-btn:hover,
+.apple-btn:hover {
+    background: rgba(70, 70, 100, 0.6);
+    border-color: rgba(100, 100, 130, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Additional drag prevention */
+* {
+    -webkit-touch-callout: none;
+}
+
+img,
+button,
+a,
+input[type="checkbox"] {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* Prevent horizontal overflow on all form elements */
+h2,
+.already-account,
+.create-btn,
+.or-divider,
+.social-buttons,
+.terms-checkbox {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure no element causes horizontal scroll */
+* {
+    box-sizing: border-box;
+}
